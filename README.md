@@ -4,7 +4,7 @@ A web-based platform that analyzes and visualizes company reviews from various s
 
 ## Features
 
-- Search and analyze company reviews from multiple sources
+- Search and analyze company reviews from capterra
 - Visualize review trends over time
 - Filter reviews by date range and source
 - User-friendly interface with modern design
@@ -13,7 +13,7 @@ A web-based platform that analyzes and visualizes company reviews from various s
 ## Tech Stack
 
 - **Frontend**: Next.js 14 with TypeScript
-- **Styling**: Tailwind CSS with shadcn/ui components
+- **Styling**: Tailwind CSS 
 - **UI Framework**: React 18
 - **Animation**: Framer Motion
 - **Date Handling**: date-fns
@@ -24,7 +24,7 @@ A web-based platform that analyzes and visualizes company reviews from various s
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/Ruthvik-gr/pulsegenproject.git
 cd pulse
 ```
 
@@ -33,21 +33,16 @@ cd pulse
 npm install
 ```
 
-3. Create a `.env` file with your configuration:
-```bash
-cp .env.example .env
-```
-
-4. Start the development server:
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## API Usage
 
-To analyze company reviews, send a POST request with the following structure:
+To analyze company reviews, Enter the following information in the input fields:
 
 ```json
 {
@@ -61,4 +56,3 @@ To analyze company reviews, send a POST request with the following structure:
 ## Note on Data Sources
 
 Due to security restrictions and website protections, we currently support reviews from Capterra. Other sources like G2 were not accessible due to their security measures.
-
