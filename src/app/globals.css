@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force dark mode */
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background-color: #121212;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Dark theme colors */
+:root {
+  --background: #121212;
+  --surface: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent: #424242;
+  --border: #333333;
+}
+
+/* Override any light theme styles */
+* {
+  @apply dark:text-gray-200;
+}
+
+.bg-white, 
+.bg-gray-50, 
+.bg-gray-100, 
+.bg-gray-200 {
+  background-color: #1e1e1e !important;
+}
+
+.text-gray-800, 
+.text-gray-900, 
+.text-black {
+  color: #e0e0e0 !important;
+}
+
+.border-gray-100, 
+.border-gray-200, 
+.border-gray-300 {
+  border-color: #333333 !important;
+}
+
+@layer components {
+  .card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn {
+    background-color: var(--accent);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #555555;
+  }
+  
+  .input {
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #555555;
+  }
+}
